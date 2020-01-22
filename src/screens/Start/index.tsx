@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Linking, View,Text, TouchableOpacity, ImageBackground, StatusBar } from 'react-native';
+import { StyleSheet, Linking, View,Text, TouchableOpacity, ImageBackground, StatusBar,WebView } from 'react-native';
 
 import Image from 'react-native-scalable-image';
 

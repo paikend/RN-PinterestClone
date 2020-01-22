@@ -9,23 +9,273 @@ export default class HumanScreen extends Component {
     return (
       <ScrollView  showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
 
-        <TouchableOpacity style={{width:"100%",flexDirection:'row',  overflow: 'hidden', borderTopRightRadius:50, borderBottomRightRadius:25 }}>
+        <TouchableOpacity style={{width:"100%",flexDirection:'row',  overflow: 'hidden'}}>
         <View style={styles.container}>
           <View style={{flexDirection:'column', flex:.25}}>
             <View style={{flexDirection:'row', flex:1}}>
                 <Image style={styles.avataImage}  source={require('../../assets/img/pearl.png')}></Image>
-                <Image style={styles.image}  source={require('../../assets/img/pearl.png')}></Image>
-                <Image style={styles.image}  source={require('../../assets/img/pearl.png')}></Image>
-                <Image style={styles.image}  source={require('../../assets/img/pearl.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/1.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/2.jpeg')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/5.jpeg')}></Image>
             </View>
           </View>
-          <View style={{justifyContent:"flex-end"}}>
-            <Text style={{color:"green", fontSize:20, }}>
-              fgsdfgdsfkgjdsflgjsdflkgjsdlkgjsdflgjdslgjdslgjdslkgjdsl
+          <View style={{justifyContent:"flex-end",margin:10,left:5}}>
+            <Text style={styles.chName}>
+              빅펄
+            </Text>
+            <Text style={styles.chDetail}>
+              5조오억명
+            </Text>
+            <Text style={styles.chDetail}>
+              백경준이 추천함.
             </Text>
           </View>
         </View>
-            </TouchableOpacity>
+        <TouchableOpacity 
+            style={styles.followButton}
+            onPress={() => {}}>
+            <Text style={styles.followText}>팔로우</Text>                
+          </TouchableOpacity>
+        </TouchableOpacity>
+
+
+        <TouchableOpacity style={{width:"100%",flexDirection:'row',  overflow: 'hidden'}}>
+        <View style={styles.container}>
+          <View style={{flexDirection:'column', flex:.25}}>
+            <View style={{flexDirection:'row', flex:1}}>
+                <Image style={styles.avataImage}  source={require('../../assets/img/pearl.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/1.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/2.jpeg')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/5.jpeg')}></Image>
+            </View>
+          </View>
+          <View style={{justifyContent:"flex-end",margin:10,left:5}}>
+            <Text style={styles.chName}>
+              빅펄
+            </Text>
+            <Text style={styles.chDetail}>
+              5조오억명
+            </Text>
+            <Text style={styles.chDetail}>
+              백경준이 추천함.
+            </Text>
+          </View>
+        </View>
+        <TouchableOpacity 
+            style={styles.followButton}
+            onPress={() => {}}>
+            <Text style={styles.followText}>팔로우</Text>                
+          </TouchableOpacity>
+        </TouchableOpacity>
+        <TouchableOpacity style={{width:"100%",flexDirection:'row',  overflow: 'hidden'}}>
+        <View style={styles.container}>
+          <View style={{flexDirection:'column', flex:.25}}>
+            <View style={{flexDirection:'row', flex:1}}>
+                <Image style={styles.avataImage}  source={require('../../assets/img/pearl.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/1.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/2.jpeg')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/5.jpeg')}></Image>
+            </View>
+          </View>
+          <View style={{justifyContent:"flex-end",margin:10,left:5}}>
+            <Text style={styles.chName}>
+              빅펄
+            </Text>
+            <Text style={styles.chDetail}>
+              5조오억명
+            </Text>
+            <Text style={styles.chDetail}>
+              백경준이 추천함.
+            </Text>
+          </View>
+        </View>
+        <TouchableOpacity 
+            style={styles.followButton}
+            onPress={() => {}}>
+            <Text style={styles.followText}>팔로우</Text>                
+          </TouchableOpacity>
+        </TouchableOpacity>
+
+
+        <TouchableOpacity style={{width:"100%",flexDirection:'row',  overflow: 'hidden'}}>
+        <View style={styles.container}>
+          <View style={{flexDirection:'column', flex:.25}}>
+            <View style={{flexDirection:'row', flex:1}}>
+                <Image style={styles.avataImage}  source={require('../../assets/img/pearl.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/1.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/2.jpeg')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/5.jpeg')}></Image>
+            </View>
+          </View>
+          <View style={{justifyContent:"flex-end",margin:10,left:5}}>
+            <Text style={styles.chName}>
+              빅펄
+            </Text>
+            <Text style={styles.chDetail}>
+              5조오억명
+            </Text>
+            <Text style={styles.chDetail}>
+              백경준이 추천함.
+            </Text>
+          </View>
+        </View>
+        <TouchableOpacity 
+            style={styles.followButton}
+            onPress={() => {}}>
+            <Text style={styles.followText}>팔로우</Text>                
+          </TouchableOpacity>
+        </TouchableOpacity>
+
+
+        <TouchableOpacity style={{width:"100%",flexDirection:'row',  overflow: 'hidden'}}>
+        <View style={styles.container}>
+          <View style={{flexDirection:'column', flex:.25}}>
+            <View style={{flexDirection:'row', flex:1}}>
+                <Image style={styles.avataImage}  source={require('../../assets/img/pearl.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/1.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/2.jpeg')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/5.jpeg')}></Image>
+            </View>
+          </View>
+          <View style={{justifyContent:"flex-end",margin:10,left:5}}>
+            <Text style={styles.chName}>
+              빅펄
+            </Text>
+            <Text style={styles.chDetail}>
+              5조오억명
+            </Text>
+            <Text style={styles.chDetail}>
+              백경준이 추천함.
+            </Text>
+          </View>
+        </View>
+        <TouchableOpacity 
+            style={styles.followButton}
+            onPress={() => {}}>
+            <Text style={styles.followText}>팔로우</Text>                
+          </TouchableOpacity>
+        </TouchableOpacity>
+
+
+        <TouchableOpacity style={{width:"100%",flexDirection:'row',  overflow: 'hidden'}}>
+        <View style={styles.container}>
+          <View style={{flexDirection:'column', flex:.25}}>
+            <View style={{flexDirection:'row', flex:1}}>
+                <Image style={styles.avataImage}  source={require('../../assets/img/pearl.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/1.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/2.jpeg')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/5.jpeg')}></Image>
+            </View>
+          </View>
+          <View style={{justifyContent:"flex-end",margin:10,left:5}}>
+            <Text style={styles.chName}>
+              빅펄
+            </Text>
+            <Text style={styles.chDetail}>
+              5조오억명
+            </Text>
+            <Text style={styles.chDetail}>
+              백경준이 추천함.
+            </Text>
+          </View>
+        </View>
+        <TouchableOpacity 
+            style={styles.followButton}
+            onPress={() => {}}>
+            <Text style={styles.followText}>팔로우</Text>                
+          </TouchableOpacity>
+        </TouchableOpacity>
+
+
+
+        <TouchableOpacity style={{width:"100%",flexDirection:'row',  overflow: 'hidden'}}>
+        <View style={styles.container}>
+          <View style={{flexDirection:'column', flex:.25}}>
+            <View style={{flexDirection:'row', flex:1}}>
+                <Image style={styles.avataImage}  source={require('../../assets/img/pearl.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/1.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/2.jpeg')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/5.jpeg')}></Image>
+            </View>
+          </View>
+          <View style={{justifyContent:"flex-end",margin:10,left:5}}>
+            <Text style={styles.chName}>
+              빅펄
+            </Text>
+            <Text style={styles.chDetail}>
+              5조오억명
+            </Text>
+            <Text style={styles.chDetail}>
+              백경준이 추천함.
+            </Text>
+          </View>
+        </View>
+        <TouchableOpacity 
+            style={styles.followButton}
+            onPress={() => {}}>
+            <Text style={styles.followText}>팔로우</Text>                
+          </TouchableOpacity>
+        </TouchableOpacity>
+
+
+        <TouchableOpacity style={{width:"100%",flexDirection:'row',  overflow: 'hidden'}}>
+        <View style={styles.container}>
+          <View style={{flexDirection:'column', flex:.25}}>
+            <View style={{flexDirection:'row', flex:1}}>
+                <Image style={styles.avataImage}  source={require('../../assets/img/pearl.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/1.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/2.jpeg')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/5.jpeg')}></Image>
+            </View>
+          </View>
+          <View style={{justifyContent:"flex-end",margin:10,left:5}}>
+            <Text style={styles.chName}>
+              빅펄
+            </Text>
+            <Text style={styles.chDetail}>
+              5조오억명
+            </Text>
+            <Text style={styles.chDetail}>
+              백경준이 추천함.
+            </Text>
+          </View>
+        </View>
+        <TouchableOpacity 
+            style={styles.followButton}
+            onPress={() => {}}>
+            <Text style={styles.followText}>팔로우</Text>                
+          </TouchableOpacity>
+        </TouchableOpacity>
+
+
+        <TouchableOpacity style={{width:"100%",flexDirection:'row',  overflow: 'hidden'}}>
+        <View style={styles.container}>
+          <View style={{flexDirection:'column', flex:.25}}>
+            <View style={{flexDirection:'row', flex:1}}>
+                <Image style={styles.avataImage}  source={require('../../assets/img/pearl.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/1.png')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/2.jpeg')}></Image>
+                <Image style={styles.image}  source={require('../../assets/img/5.jpeg')}></Image>
+            </View>
+          </View>
+          <View style={{justifyContent:"flex-end",margin:10,left:5}}>
+            <Text style={styles.chName}>
+              빅펄
+            </Text>
+            <Text style={styles.chDetail}>
+              5조오억명
+            </Text>
+            <Text style={styles.chDetail}>
+              백경준이 추천함.
+            </Text>
+          </View>
+        </View>
+        <TouchableOpacity 
+            style={styles.followButton}
+            onPress={() => {}}>
+            <Text style={styles.followText}>팔로우</Text>                
+          </TouchableOpacity>
+        </TouchableOpacity>
       </ScrollView>
       );
     }
@@ -74,21 +324,21 @@ export default class HumanScreen extends Component {
           borderBottomLeftRadius:10,
           borderTopRightRadius: 10,
           borderBottomRightRadius: 10,
-          justifyContent: 'center',
-          // alignSelf: 'center',
-          width:75,
-          height:50,
-          // flexDirection: 'row', 
+          alignContent:'center',
+          justifyContent:'center',
+          alignSelf: 'flex-end',
+          width:70,
+          height:40,
+          flexDirection: 'row', 
           // padding:20,
           fontSize: 20,
           fontWeight: 'bold',
+          marginRight:10,
+          marginBottom:25
         },
         followText:{
-          justifyContent: 'center',
-          color:"#ffffff",
-          fontSize:18,
-          
-          flex:1,
+          color:"white",
+          fontSize:18
         },
         chName:{
           // paddingLeft:5,
@@ -98,11 +348,20 @@ export default class HumanScreen extends Component {
           // padding:10,
           fontWeight:"bold",          
           textAlign:"left",
+          marginTop:10,
+          paddingBottom:5
+        },
+        chDetail:{
+          // paddingLeft:5,
+          color:"white",
+          fontSize:12,
+          // marginTop:7,
+          // padding:10,
+          textAlign:"left",
 
         },
         avataFollower:{
           // paddingLeft:13,
-      
           color:"white",
           fontSize:18,
           textAlign:"left",

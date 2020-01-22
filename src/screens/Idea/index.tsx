@@ -2,9 +2,9 @@ import React from 'react';
 import { StyleSheet,ScrollView, Dimensions, View } from 'react-native';
 import { SceneMap, TabView } from 'react-native-tab-view';
 import FloatButton from '../../components/Button/FloatButton';
-import RecommandScreen from '../../components/HomeView/RecommandScreen';
+import PinScreen from '../../components/IdeaView/PinScreen';
 // import TopSwitch from '../../components/HomeView/TopSwtich';
-import FollowingScreen from '../../components/HomeView/FollowingScreen';
+import BoardScreen from '../../components/IdeaView/BoardScreen';
 import { SafeAreaView, } from 'react-navigation';
 import { withNavigation } from 'react-navigation';
 import SwitchSelector from "react-native-switch-selector";
@@ -61,8 +61,8 @@ class Idea extends React.Component<IdeaProps, IdeaState> {
           <TabView
               navigationState={this.state}
               renderScene={SceneMap({
-                  first: RecommandScreen,
-                  second:FollowingScreen,
+                  first: BoardScreen,
+                  second:PinScreen,
               })}
               onIndexChange={index => this.setState({ index })}
               initialLayout={{ width: Dimensions.get('window').width }}

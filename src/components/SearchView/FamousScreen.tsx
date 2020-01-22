@@ -16,11 +16,11 @@ export default class FamousScreen extends Component {
         <View style={{ flexDirection: 'row', width:"100%", justifyContent:"space-evenly"}}>
           <View style={{ flexDirection: 'column',  alignItems: 'flex-start'}}>
             <ImageBackground style={styles.image}  source={require('../../assets/img/1.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
-            <ImageBackground style={styles.image}  source={require('../../assets/img/1.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
+            <ImageBackground style={styles.image}  source={require('../../assets/img/2.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
           </View>
           <View style={{ flexDirection: 'column',  alignItems: 'flex-end'}}>
-          <ImageBackground style={styles.image}  source={require('../../assets/img/1.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
-            <ImageBackground style={styles.image}  source={require('../../assets/img/1.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
+          <ImageBackground style={styles.image}  source={require('../../assets/img/3.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
+            <ImageBackground style={styles.image}  source={require('../../assets/img/4.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
           </View>
         </View>
         <View style={{ flexDirection: 'row', width:"100%"}}>
@@ -30,14 +30,14 @@ export default class FamousScreen extends Component {
           </View>
         <View style={{ flexDirection: 'row', width:"100%", justifyContent:"space-evenly"}}>
           <View style={{ flexDirection: 'column',  alignItems: 'flex-start'}}>
-            <ImageBackground style={styles.image}  source={require('../../assets/img/1.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
-            <ImageBackground style={styles.image}  source={require('../../assets/img/1.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
+            <ImageBackground style={styles.image}  source={require('../../assets/img/4.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
+            <ImageBackground style={styles.image}  source={require('../../assets/img/5.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
             <ImageBackground style={styles.image}  source={require('../../assets/img/1.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
           </View>
           <View style={{ flexDirection: 'column',  alignItems: 'flex-end'}}>
-          <ImageBackground style={styles.image}  source={require('../../assets/img/1.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
-          <ImageBackground style={styles.image}  source={require('../../assets/img/1.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
-          <ImageBackground style={styles.image}  source={require('../../assets/img/1.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
+          <ImageBackground style={styles.image}  source={require('../../assets/img/3.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
+          <ImageBackground style={styles.image}  source={require('../../assets/img/2.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
+          <ImageBackground style={styles.image}  source={require('../../assets/img/5.jpeg') } ><Text style={{ margin:10, fontSize:15, color:"#ffffff", fontWeight:"bold"}}>배경화면</Text></ImageBackground>
           </View>
           
         </View>
