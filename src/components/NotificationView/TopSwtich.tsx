@@ -10,7 +10,7 @@ interface SwitchProps {
 interface SwitchState {
   isScreen?: number;
 }
-
+ 
 
 export default class FollowingScreen extends Component<SwitchProps,SwitchState> {
 props:SwitchProps = {
