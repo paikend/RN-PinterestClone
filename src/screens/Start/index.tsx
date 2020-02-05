@@ -3,6 +3,8 @@ import { StyleSheet, View,Text, TouchableOpacity, ImageBackground, StatusBar, Mo
 import Image from 'react-native-scalable-image';
 import { NavigationScreenProp, withNavigation, SafeAreaView,} from 'react-navigation';
 import StartInfo from '../../components/StartView/StartInfo';
+import LoginModal from '../../components/StartView/LoginModal';
+
 export interface NavigationProps {
     navigation: NavigationScreenProp<any, any>
 }
@@ -53,30 +55,7 @@ class Start extends React.Component<StartProps, StartState> {
 
       
       <Modal animationType = {"slide"} transparent = {false} visible = {this.state.modal}>
-      <SafeAreaView style={{backgroundColor:"#000000", flex:1}}> 
-      <View style={styles.modalScreen}>
-        <View style={{flex:1, flexDirection:"row"}}>      
-          <TouchableOpacity style={styles.btnClose} onPress={()=>{this._modalOpen(this.state.modal);}}>
-            <Text style={styles.textClose}>X</Text>
-          </TouchableOpacity>
-          <View style={{alignItems:"center"}}>
-            <Text style={styles.textModal}>로그인</Text>
-          </View>
-        </View>
-      <View style={{alignItems:"center"}}>
-      <Text style={styles.textClose}>또는</Text>
-          <Text style={styles.textClose}>이메일</Text>
-        <TextInput></TextInput>
-        <View style={{alignItems:"center"}}>
-          <Text style={styles.textClose}>비밀번호</Text>
-        <TextInput></TextInput>
-        </View>
-        <TouchableOpacity style={styles.btnLogin} onPress={()=>{this._modalOpen(this.state.modal);}}>
-       <Text style={styles.btnText}>로그인</Text>
-      </TouchableOpacity>
-        </View>
-      </View>
-      </SafeAreaView>
+          <LoginModal/>
       </Modal>
 
 
@@ -94,13 +73,18 @@ class Start extends React.Component<StartProps, StartState> {
 
 
 const styles = StyleSheet.create({
+  textTobBar:{
+    color:'#ffffff',
+    fontWeight:"bold",
+    fontSize:15,
+    alignSelf:'center',
+    alignItems:"center",
+    margin:5
+  },
   textModal:{
     color:'#ffffff',
     fontWeight:"bold",
     fontSize:25,
-    alignSelf:'center',
-    alignItems:"center",
-
   },
   btnClose:{
     // margin:2.5,
@@ -109,7 +93,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex:0.1,
     width: 75,
-    height:15
+    height:30,
+    margin:10,
   },
   
   textClose:{
@@ -173,9 +158,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex:0.15,
     width:'95%',
-    height:10,
+    height:15,
     fontSize: 20,
-    fontWeight: 'bold',
     margin:2.5,
     top:10
   },
@@ -189,9 +173,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex:0.10,
     width:'85%',
-    height:10,
+    height:15,
     fontSize: 20,
-    fontWeight: 'bold',
     margin:2.5,
     top:10
   },
@@ -203,9 +186,9 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     borderBottomRightRadius: 40,
     justifyContent: 'center',
-    flex:0.10,
+    // flex:0.10,
     width:'85%',
-    height:10,
+    height:30,
     fontSize: 20,
     fontWeight: 'bold',
     margin:2.5,

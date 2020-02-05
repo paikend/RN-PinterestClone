@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View,  StyleSheet, TouchableOpacity, StatusBar, ScrollView } from 'react-native';
-import Image from 'react-native-scalable-image';
+// import Image from 'react-native-scalable-image';
 
 
 export default class RecommandScreen extends Component {

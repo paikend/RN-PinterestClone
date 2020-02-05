@@ -1,51 +1,23 @@
 import React, { Component } from 'react';
 import { Text, View,  StyleSheet, TouchableOpacity, StatusBar, ScrollView } from 'react-native';
 import Image from 'react-native-scalable-image';
-
+import axios from 'axios'
 
 export default class RecommandScreen extends Component {
   componentDidMount() {
-      StatusBar.setBarStyle('light-content');
+  const res =  axios.get('http://localhost:8000/boards/pins').then(res => res.data).catch()
+  console.log(res);
   }
 
   render() {
     return (
       <View style={styles.container}>
-
       <View style={styles.leftContainer}>
           <View style={styles.flexOne}>
             <Image style={styles.image} width={190}  source={require('../../assets/img/1.png') } />
             <View style={styles.imageText}>
               <Text style={styles.text}> sgfdsfgdsfgdad432</Text>
               <TouchableOpacity style={styles.tochableEtc}><Text style={styles.etc}>···</Text></TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.flexOne}>
-            <Image style={styles.image} width={190}  source={require('../../assets/img/1.jpeg') } />
-            <View style={styles.imageText}>
-              <Text style={styles.text}> gsfdgdsfgsdfgdg </Text>
-              <TouchableOpacity><Text style={styles.etc}>···</Text></TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.flexOne}>
-            <Image style={styles.image} width={190}  source={require('../../assets/img/pearl.png') } />
-            <View style={styles.imageText}>
-              <Text style={styles.text}> gfsdgdsgsddå </Text>
-              <TouchableOpacity><Text style={styles.etc}>···</Text></TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.flexOne}>
-            <Image style={styles.image} width={190}  source={require('../../assets/img/1.png') } />
-            <View style={styles.imageText}>
-              <Text style={styles.text}> 하이하이 </Text>
-              <TouchableOpacity><Text style={styles.etc}>···</Text></TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.flexOne}>
-            <Image style={styles.image} width={190}  source={require('../../assets/img/1.png') } />
-            <View style={styles.imageText}>
-              <Text style={styles.text}> 하이하이 </Text>
-              <TouchableOpacity><Text style={styles.etc}>···</Text></TouchableOpacity>
             </View>
           </View>
       </View>
@@ -56,34 +28,6 @@ export default class RecommandScreen extends Component {
             <Image style={styles.image} width={190}  source={require('../../assets/img/2.jpeg') } />
             <View style={styles.imageText}>
               <Text style={styles.text}> </Text>
-              <TouchableOpacity><Text style={styles.etc}>···</Text></TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.flexOne}>
-            <Image style={styles.image} width={190}  source={require('../../assets/img/4.jpeg') } />
-            <View style={styles.imageText}>
-              <Text style={styles.text}>  </Text>
-              <TouchableOpacity><Text style={styles.etc}>···</Text></TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.flexOne}>
-            <Image style={styles.image} width={190}  source={require('../../assets/img/5.jpeg') } />
-            <View style={styles.imageText}>
-              <Text style={styles.text}>  </Text>
-              <TouchableOpacity><Text style={styles.etc}>···</Text></TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.flexOne}>
-            <Image style={styles.image} width={190}  source={require('../../assets/img/1.png') } />
-            <View style={styles.imageText}>
-              <Text style={styles.text}> 하이하이 </Text>
-              <TouchableOpacity><Text style={styles.etc}>···</Text></TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.flexOne}>
-            <Image style={styles.image} width={190}  source={require('../../assets/img/pearl.png') } />
-            <View style={styles.imageText}>
-              <Text style={styles.text}> 하이하이 </Text>
               <TouchableOpacity><Text style={styles.etc}>···</Text></TouchableOpacity>
             </View>
           </View>
