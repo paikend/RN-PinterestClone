@@ -4,9 +4,9 @@ import Image from 'react-native-scalable-image';
 import axios from 'axios'
 
 export default class RecommandScreen extends Component {
-  componentDidMount() {
-  const res =  axios.get('http://localhost:8000/boards/pins').then(res => res.data).catch()
-  console.log(res);
+  async componentDidMount() {
+  const res =  await axios.get('http://localhost:8000/boards/pins').then(res => res.data).catch()
+  console.log(res['results'][0]);
   }
 
   render() {
