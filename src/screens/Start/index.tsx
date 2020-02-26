@@ -3,7 +3,7 @@ import { StyleSheet, View,Text, TouchableOpacity, ImageBackground, StatusBar, Mo
 import Image from 'react-native-scalable-image';
 import { NavigationScreenProp, withNavigation, SafeAreaView,} from 'react-navigation';
 import StartInfo from '../../components/StartView/StartInfo';
-import LoginModal from '../../components/StartView/LoginModal';
+// import LoginModal from '../../components/StartView/LoginModal';
 
 export interface NavigationProps {
     navigation: NavigationScreenProp<any, any>
@@ -55,7 +55,7 @@ class Start extends React.Component<StartProps, StartState> {
 
       
       <Modal animationType = {"slide"} transparent = {false} visible = {this.state.modal}>
-          <LoginModal/>
+          {/* <LoginModal/> */}
       </Modal>
 
 

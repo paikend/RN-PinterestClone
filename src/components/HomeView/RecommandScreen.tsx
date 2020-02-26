@@ -1,41 +1,71 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Text, View,  StyleSheet, TouchableOpacity, StatusBar, ScrollView } from 'react-native';
 import Image from 'react-native-scalable-image';
-import axios from 'axios'
+import { useQuery } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
 
-export default class RecommandScreen extends Component {
-  async componentDidMount() {
-  const res =  await axios.get('http://localhost:8000/boards/pins').then(res => res.data).catch()
-  console.log(res['results'][0]);
+// import { client } from '../../utils/api'
+
+// interface Recommand {
+//   id: number;
+//   title: string;
+//   photoUrl: string;
+// }
+
+// interface RecommandData {
+//   recommand: Recommand[];
+// }
+
+const GET_ROCKET_INVENTORY = gql`
+  query {
+    allPins{
+      id
+      title
+      photoUrl
+    }
   }
+`;
 
-  render() {
+
+function RecommandScreen() {
+  const { loading, error, data } = useQuery(GET_ROCKET_INVENTORY);
+  if (loading) return (<View>
+    <Text>Loding</Text>
+  </View>);
+  if (error) return (<View>
+    <Text>err</Text>
+  </View>);
+  let leftSide, rightSide = [];
+  leftSide = data['allPins'].splice(0, Math.ceil(data['allPins'].length /2));
+  rightSide = data['allPins'];
     return (
       <View style={styles.container}>
-      <View style={styles.leftContainer}>
-          <View style={styles.flexOne}>
-            <Image style={styles.image} width={190}  source={require('../../assets/img/1.png') } />
-            <View style={styles.imageText}>
-              <Text style={styles.text}> sgfdsfgdsfgdad432</Text>
-              <TouchableOpacity style={styles.tochableEtc}><Text style={styles.etc}>···</Text></TouchableOpacity>
-            </View>
-          </View>
-      </View>
-
-        <View style={styles.rightContainer}>
-        
-          <View style={styles.flexOne}>
-            <Image style={styles.image} width={190}  source={require('../../assets/img/2.jpeg') } />
-            <View style={styles.imageText}>
-              <Text style={styles.text}> </Text>
-              <TouchableOpacity><Text style={styles.etc}>···</Text></TouchableOpacity>
-            </View>
-          </View>
-
+        <View style={ styles.leftContainer }>
+            { leftSide.map((pin:any) =>(
+             <View style={styles.flexOne}>
+               <Image style={ styles.image} width={190} source= {{ uri:pin.photoUrl }}  />
+               <View style={styles.imageText}>
+                 <Text style={styles.text}> { pin.title }</Text>
+                 <TouchableOpacity style={styles.tochableEtc}><Text style={styles.etc}>···</Text></TouchableOpacity>
+               </View>
+             </View>
+            ))}
         </View>
-    </View>
+        <View style={ styles.rightContainer }>
+        { rightSide.map((pin:any) =>(
+             <View style={styles.flexOne}>
+               <Image style={ styles.image} width={190} source= {{ uri:pin.photoUrl }}  />
+               <View style={styles.imageText}>
+                 <Text style={styles.text}> { pin.title }</Text>
+                 <TouchableOpacity style={styles.tochableEtc}><Text style={styles.etc}>···</Text></TouchableOpacity>
+               </View>
+             </View>
+        ))}
+        </View>
+      </View>
+    
     );
-  }
+  
 }
 
 
@@ -108,3 +138,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   }
 });
+
+export default RecommandScreen;

@@ -1,17 +1,19 @@
 
 import React from 'react';
 import AppNavigator from "./src/navigation/navigation";
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import reducers from './src/reducers/index';
+import { ApolloProvider } from '@apollo/react-hooks';
+import ApolloClient from 'apollo-boost';
 
-const store = createStore(reducers)
+const client = new ApolloClient({
+  uri: 'http://localhost:8000/graphql/',
+});
+
 const App = () => {
   console.disableYellowBox = true
   return (
-    <Provider store={store}>
+    <ApolloProvider client={client}>
       <AppNavigator/>
-    </Provider>
+    </ApolloProvider>
   );
 };
 
