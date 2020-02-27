@@ -69,7 +69,6 @@ class Home extends React.Component<HomeProps, HomeState> {
               useNativeDriver
           />  
           </ScrollView>
-          <FloatButton/>
       </SafeAreaView>
     );
   }

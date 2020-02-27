@@ -6,11 +6,20 @@ import Home from "../screens/Home";
 import Search from '../screens/Search';
 import Notification from '../screens/Nofification'
 import Idea from "../screens/Idea";
+import Index from '../screens';
 
 // interface typeOption = {
  
 // }
 const appStack = createStackNavigator({
+    Index: {
+        screen: Index,
+        navigationOptions: () => ({
+            header: null,
+            headerBackTitle: null,
+        }),
+
+    },
     Start: {
         screen: Start,
         navigationOptions: () => ({
@@ -71,6 +80,7 @@ const appStack = createStackNavigator({
 // @ts-ignore
 export default createAppContainer(createSwitchNavigator(
     {
+        Index: Index,
         Home: Home,
         Search:Search,
         Notification:Notification,
@@ -79,6 +89,6 @@ export default createAppContainer(createSwitchNavigator(
         App: appStack,
     },
     {
-        initialRouteName: 'Home'
+        initialRouteName: 'Index'
     }
 ));

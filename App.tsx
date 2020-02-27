@@ -2,10 +2,11 @@
 import React from 'react';
 import AppNavigator from "./src/navigation/navigation";
 import { ApolloProvider } from '@apollo/react-hooks';
-import ApolloClient from 'apollo-boost';
+import ApolloClient, { InMemoryCache } from 'apollo-boost';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:8000/graphql/',
+  uri : 'http://localhost:8000/graphql/',
+  cache : new InMemoryCache()
 });
 
 const App = () => {

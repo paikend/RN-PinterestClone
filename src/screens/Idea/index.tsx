@@ -70,7 +70,7 @@ class Idea extends React.Component<IdeaProps, IdeaState> {
               useNativeDriver
           />  
           </ScrollView>
-          <FloatButton/>
+          {/* <FloatButton/> */}
       </SafeAreaView>
     );
   }

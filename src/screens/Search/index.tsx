@@ -62,7 +62,7 @@ export default class Search extends React.Component<SearchProps, SearchState> {
                         />}
                     useNativeDriver
                 />  
-            <FloatButton/>
+            {/* <FloatButton/> */}
         </SafeAreaView>
         );
     }

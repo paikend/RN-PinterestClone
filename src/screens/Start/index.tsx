@@ -26,7 +26,7 @@ class Start extends React.Component<StartProps, StartState> {
 
   componentDidMount() {
     StatusBar.setBarStyle('light-content');
-  
+
   }
   _pageMove(path:any):void{
     this.props.navigation.navigate(path);

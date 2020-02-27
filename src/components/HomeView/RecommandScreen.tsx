@@ -16,36 +16,48 @@ import gql from 'graphql-tag';
 //   recommand: Recommand[];
 // }
 
-const GET_ROCKET_INVENTORY = gql`
-  query {
-    allPins{
-      id
-      title
-      photoUrl
+const GET_PIN_LIST = gql`
+query{
+	allPins(first:10){
+    pageInfo{
+      startCursor
+      endCursor
+      hasNextPage
+      hasPreviousPage
+    }
+    edges{
+      cursor
+      node{
+        id
+        title
+        photoUrl
+      }
     }
   }
+}
+
 `;
 
 
 function RecommandScreen() {
-  const { loading, error, data } = useQuery(GET_ROCKET_INVENTORY);
+  const { loading, error, data } = useQuery(GET_PIN_LIST);
+  let leftSide, rightSide = [];
   if (loading) return (<View>
-    <Text>Loding</Text>
+    <Text>loading</Text>
   </View>);
   if (error) return (<View>
     <Text>err</Text>
   </View>);
-  let leftSide, rightSide = [];
-  leftSide = data['allPins'].splice(0, Math.ceil(data['allPins'].length /2));
-  rightSide = data['allPins'];
+  leftSide = data['allPins']['edges'].splice(0, Math.ceil(data['allPins']['edges'].length /2));
+  rightSide = data['allPins']['edges'];
     return (
-      <View style={styles.container}>
+      <View style={styles.container} >
         <View style={ styles.leftContainer }>
             { leftSide.map((pin:any) =>(
              <View style={styles.flexOne}>
-               <Image style={ styles.image} width={190} source= {{ uri:pin.photoUrl }}  />
+               <Image style={ styles.image} width={190} source= {{ uri:pin.node.photoUrl }}  />
                <View style={styles.imageText}>
-                 <Text style={styles.text}> { pin.title }</Text>
+                 <Text style={styles.text}> { pin.node.title }</Text>
                  <TouchableOpacity style={styles.tochableEtc}><Text style={styles.etc}>···</Text></TouchableOpacity>
                </View>
              </View>
@@ -54,9 +66,9 @@ function RecommandScreen() {
         <View style={ styles.rightContainer }>
         { rightSide.map((pin:any) =>(
              <View style={styles.flexOne}>
-               <Image style={ styles.image} width={190} source= {{ uri:pin.photoUrl }}  />
+               <Image style={ styles.image} width={190} source= {{ uri:pin.node.photoUrl }}  />
                <View style={styles.imageText}>
-                 <Text style={styles.text}> { pin.title }</Text>
+                 <Text style={styles.text}> { pin.node.title }</Text>
                  <TouchableOpacity style={styles.tochableEtc}><Text style={styles.etc}>···</Text></TouchableOpacity>
                </View>
              </View>

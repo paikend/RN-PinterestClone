@@ -70,7 +70,7 @@ class Notification extends React.Component<NotificationProps, NotificationState>
               useNativeDriver
           />  
           </ScrollView>
-          <FloatButton/>
+          {/* <FloatButton/> */}
       </SafeAreaView>
     );
   }

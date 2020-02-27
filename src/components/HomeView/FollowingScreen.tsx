@@ -2,39 +2,12 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, Alert, Button } from 'react-native';
 import Image from 'react-native-scalable-image';
 import { checkPropTypes } from 'prop-types';
-// import { Button } from 'react-native-elements';
-export default class FollowingScreen extends Component {
-  render() {
+import { useQuery } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
+
+function FollowingScreen() {
     return (
         <View style={styles.container}>
-          <View style={{ flexDirection: 'row', width:"100%"}}>
-            <TouchableOpacity style={{ flexDirection: 'row', padding:20, flex:1}}>
-              <View>
-                <Image style={styles.avataImage} width={50}  source={require('../../assets/img/pearl.png') } />
-              </View>
-                <View style={{ flexDirection: 'column',  alignItems: 'center',  padding:15}}>
-                  <Text style={styles.avataName}>큐플레이스</Text>
-                  <Text style={styles.avataFollower}> 1.5만 팔로워</Text>
-                </View>
-            </TouchableOpacity>
-            <View style={{ padding:30}} >
-              <TouchableOpacity 
-                style={styles.followButton}
-                onPress={() => {}}>
-                <Text style={styles.followText}>팔로우</Text>                
-              </TouchableOpacity>
-            </View>
-          </View>
-        <View style={{ flexDirection: 'row', width:"100%", justifyContent:"space-evenly"}}>
-          <View style={{ flexDirection: 'column',  alignItems: 'flex-start'}}>
-            <Image style={styles.image} width={190} height={280} source={require('../../assets/img/pearl.png') } />
-            <Image style={styles.image} width={190} height={280} source={require('../../assets/img/pearl.png') } />
-          </View>
-          <View style={{ flexDirection: 'column',  alignItems: 'flex-end'}}>
-            <Image style={styles.image} width={190} height={280} source={require('../../assets/img/pearl.png') } />
-            <Image style={styles.image} width={190} height={280} source={require('../../assets/img/pearl.png') } />
-          </View>
-        </View>
         <View style={{ flexDirection: 'row', width:"100%"}}>
             <TouchableOpacity style={{ flexDirection: 'row', padding:20, flex:1}}>
               <View>
@@ -65,7 +38,7 @@ export default class FollowingScreen extends Component {
         </View>
         </View>
       );
-    }
+    
   }
   
       const styles = StyleSheet.create({
@@ -137,3 +110,4 @@ export default class FollowingScreen extends Component {
           // marginTop:7,
         }
       });
+export default FollowingScreen
