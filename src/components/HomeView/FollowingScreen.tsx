@@ -4,6 +4,15 @@ import Image from 'react-native-scalable-image';
 import { checkPropTypes } from 'prop-types';
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
+const GET_ROCKET_INVENTORY = gql`
+  query {
+    allPins{
+      id
+      title
+      photoUrl
+    }
+  }
+`;
 
 function FollowingScreen() {
     return (

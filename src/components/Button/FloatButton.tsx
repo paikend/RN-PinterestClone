@@ -25,7 +25,6 @@ _pageMove(path:string):void{
 }
 _selectionOnPress(path:string):void {
   this.setState({ selectedButton: path });
-  console.log(this.state.selectedButton);
 }
   render() {
     return (

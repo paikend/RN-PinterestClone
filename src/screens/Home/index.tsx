@@ -36,7 +36,7 @@ class Home extends React.Component<HomeProps, HomeState> {
   render(){
     return (
       <SafeAreaView style={{backgroundColor:"#000000", flex:1}}> 
-                <View style={{ flex: 0.075, justifyContent: 'flex-start', alignItems: 'center'}}>
+          <View style={{ flex: 0.075, justifyContent: 'flex-start', alignItems: 'center'}}>
             <SwitchSelector
                 style={{width:'30%', backgroundColor:'#000000', borderColor:'#000000'}}
                 value={this.state.index}
@@ -55,7 +55,7 @@ class Home extends React.Component<HomeProps, HomeState> {
                     { label: "팔로잉", value: 1}
                 ]}
                 />
-      </View>
+          </View>
           <ScrollView style={{flex:1}} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} >
           <TabView
               navigationState={this.state}
