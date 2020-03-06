@@ -18,7 +18,7 @@ import gql from 'graphql-tag';
 
 const GET_PIN_LIST = gql`
 query{
-	allPins(first:10){
+	allPins(first:5){
     pageInfo{
       startCursor
       endCursor
@@ -35,7 +35,6 @@ query{
     }
   }
 }
-
 `;
 
 

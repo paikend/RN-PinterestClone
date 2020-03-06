@@ -89,6 +89,6 @@ export default createAppContainer(createSwitchNavigator(
         App: appStack,
     },
     {
-        initialRouteName: 'Index'
+        initialRouteName: 'Start'
     }
 ));
